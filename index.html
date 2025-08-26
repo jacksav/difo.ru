@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>difo.ru - Ваш Премиальный Домен для Брендинга!</title>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Общие стили для страницы */
+        body { 
+            font-family: 'Open Sans', Arial, sans-serif; /* Современный, читабельный шрифт */
+            text-align: center; 
+            padding: 40px 20px; 
+            background-color: #f8f9fa; /* Светло-серый фон */
+            color: #343a40; /* Темный текст для контраста */
+            line-height: 1.7;
+            margin: 0;
+            -webkit-font-smoothing: antialiased; /* Сглаживание текста */
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container { 
+            margin: 20px auto; 
+            max-width: 800px; /* Широкий контейнер */
+            background-color: #ffffff; 
+            padding: 50px; /* Больше отступов */
+            border-radius: 15px; /* Мягкие скругленные углы */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Выраженная тень */
+            border: 1px solid #e9ecef; /* Светлая рамка */
+        }
+
+        /* Крупное отображение доменного имени вверху */
+        .top-domain-display {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5em; /* Очень крупный размер шрифта */
+            font-weight: 800; /* Очень жирный */
+            color: #dc3545; /* Выделяющий красный акцент */
+            line-height: 1;
+            margin-bottom: 30px; /* Увеличил отступ после домена */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Сильная тень для глубины */
+        }
+
+        /* Стили для параграфов и списков */
+        p { 
+            margin-bottom: 20px; 
+            font-size: 1.1em;
+            color: #495057;
+        }
+        ul { 
+            list-style-type: none; 
+            padding: 0; 
+            margin-bottom: 35px; 
+            font-size: 1.15em;
+            color: #555;
+            text-align: left; /* Выравнивание элементов списка по левому краю */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        li { 
+            margin-bottom: 12px; 
+            font-weight: 500; 
+            color: #343a40; 
+            position: relative;
+            padding-left: 25px; /* Место для маркера */
+        }
+        li::before { /* Пользовательский маркер */
+            content: '✓';
+            color: #28a745; /* Зеленая галочка */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        strong { font-weight: bold; color: #343a40; }
+
+        /* Стили для блока цены */
+        .price-box {
+            background-color: #e6f7ff; /* Светло-голубой фон */
+            border: 2px solid #007bff; /* Синяя рамка */
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .price-box h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #007bff;
+            font-size: 1.8em;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .buy-now-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2em; /* Крупная цена */
+            font-weight: bold;
+            color: #28a745; /* Зеленый цвет успеха */
+            margin-bottom: 15px;
+            display: block;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Легкая тень текста */
+        }
+        .price-note {
+            font-size: 1em;
+            color: #6c757d;
+            margin-top: 15px;
+        }
+
+        /* Стили для формы */
+        form { 
+            text-align: left; 
+            margin-top: 50px; 
+            padding-top: 35px; 
+            border-top: 1px solid #e9ecef; /* Светлая рамка для отделения формы */
+        }
+        label { 
+            display: block; 
+            margin-bottom: 12px; 
+            font-weight: 600; 
+            color: #495057; 
+            font-size: 1em;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 28px); /* Корректировка с учетом padding и border */
+            padding: 14px;
+            margin-bottom: 25px;
+            border: 1px solid #ced4da; /* Светло-серая рамка */
+            border-radius: 8px; /* Чуть более скругленные поля ввода */
+            font-size: 1.05em;
+            box-sizing: border-box; 
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #007bff; /* Подсветка при фокусе */
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+            outline: none;
+        }
+        textarea { 
+            resize: vertical; 
+            min-height: 140px; /* Более высокая текстовая область */
+        }
+        button {
+            background-color: #007bff; /* Основной синий для кнопки */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.15em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,123,255,0.2);
+        }
+        button:hover { 
+            background-color: #0056b3; 
+            transform: translateY(-2px); /* Легкий подъем при наведении */
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(0,123,255,0.2);
+        }
+
+        /* Адаптивные настройки */
+        @media (max-width: 768px) {
+            body { padding: 25px 15px; }
+            .container { padding: 30px; margin: 15px auto; }
+            .top-domain-display { font-size: 3.5em; }
+            .buy-now-price { font-size: 2.5em; }
+            p { font-size: 1em; }
+            ul { font-size: 1em; }
+            li { padding-left: 20px; }
+            li::before { left: -5px; }
+            input[type="text"], input[type="email"], textarea { width: calc(100% - 20px); padding: 10px; }
+            button { padding: 12px 20px; font-size: 1em; }
+        }
+        @media (max-width: 480px) {
+            .top-domain-display { font-size: 2.5em; }
+            .buy-now-price { font-size: 2em; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-domain-display">difo.ru</div>
+        <!-- Строчка с теглайном удалена -->
+
+        <div class="price-box">
+            <h2>Этот премиальный домен доступен для немедленного приобретения!</h2>
+            <span class="buy-now-price">US $9,900</span>
+            <p class="price-note">Закрепите за собой <span class="domain-highlight">difo.ru</span> сейчас и получите краткое, запоминающееся имя для вашего бренда на российском рынке. Серьёзные предложения приветствуются.</p>
+        </div>
+
+        <p>Откройте для себя безграничные возможности с <strong>difo.ru</strong> – коротким, звучным и уникальным доменным именем! Оно идеально подходит для любого проекта, которому требуется **быстрое запоминание, сильный брендинг и современное звучание** на русскомворящем рынке. Краткость и простота произношения делают его мощным инструментом для вашего бизнеса.</p>
+        
+        <p>Представьте потенциал для вашего бренда:</p>
+        <ul>
+            <li><strong>Идеален для нового стартапа:</strong> Запустите свой бизнес с именем, которое выделяется и легко запоминается.</li>
+            <li><strong>Технологические проекты:</strong> Современное, лаконичное название для IT-компаний, мобильных приложений или онлайн-сервисов.</li>
+            <li><strong>Креативные агентства и медиа:</strong> Подходит для любых проектов, где важны стиль, краткость и уникальность.</li>
+            <li><strong>Онлайн-магазины и платформы:</strong> Привлеките внимание клиентов именем, которое легко диктовать и находить.</li>
+            <li><strong>Превосходно для брендинга:</strong> Четыре буквы, звучное произношение и отсутствие прямых ассоциаций позволяют создать сильный и оригинальный бренд с нуля.</li>
+            <li>Этот домен обладает проверенной историей, сигнализируя о надёжном и устоявшемся цифровом активе.</li>
+        </ul>
+
+        <p><strong>difo.ru</strong> – это не просто домен; это чистый холст для вашего бренда. Не упустите эту редкую возможность стать владельцем цифровой недвижимости, которая обещает выдающуюся отдачу от инвестиций и уникальное позиционирование на рынке.</p>
+
+        <p>Готовы заявить о себе? Заполните форму запроса ниже, и мы свяжемся с вами в ближайшее время, чтобы обсудить, как <span class="domain-highlight">difo.ru</span> может стать краеугольным камнем вашего следующего большого успеха!</p>
+
+        <form action="https://formspree.io/f/mvgbpnpr" method="POST">
+            <!-- Скрытое поле для принудительного использования русского языка на странице подтверждения Formspree -->
+            <input type="hidden" name="_language" value="ru" />
+
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше полное имя" required>
+
+            <label for="email">Ваш Email (для связи):</label>
+            <input type="email" id="email" name="_replyto" placeholder="ваш@email.com" required>
+
+            <label for="domain_of_interest">Домен(ы), которыми вы интересуетесь:</label>
+            <input type="text" id="domain_of_interest" name="domain_of_interest" value="difo.ru" readonly>
+            
+            <label for="price_offer">Ваше предложение (в долларах США, по желанию):</label>
+            <input type="text" id="price_offer" name="price_offer" placeholder="Например: 9000 USD или 'Сделать предложение'">
+
+            <label for="message">Ваше сообщение или вопросы:</label>
+            <textarea id="message" name="message" rows="6" placeholder="Напишите ваше сообщение или конкретные вопросы здесь..." required></textarea>
+
+            <!-- Honeypot - невидимое поле для отлова спам-ботов. НЕ УДАЛЯЙТЕ! -->
+            <input type="text" name="_gotcha" style="display:none" /> 
+
+            <button type="submit">Отправить запрос</button>
+        </form>
+    </div>
+
+</body>
+</html>
